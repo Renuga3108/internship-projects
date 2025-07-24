@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Parsed Resumes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        h2 {
+            margin-top: 20px;
+        }
+        table.data {
+            border-collapse: collapse;
+            margin: 20px auto;
+            width: 90%;
+        }
+        table.data th, table.data td {
+            border: 1px solid #888;
+            padding: 10px;
+            text-align: center;
+        }
+        table.data th {
+            background-color: #f2f2f2;
+        }
+        .clear-btn {
+            margin: 20px auto;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #c9302c;
+        }
+    </style>
+</head>
+<body>
+    <h2>All Parsed Resumes</h2>
+
+    {% for table in tables %}
+        {{ table|safe }}
+    {% endfor %}
+
+    <!-- Clear button -->
+    <div class="clear-btn">
+        <form action="/clear" method="post">
+            <button type="submit">Clear All Resumes</button>
+        </form>
+    </div>
+</body>
+</html>
