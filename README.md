@@ -1,4 +1,4 @@
-# ✨ Internship Projects
+#  Internship Projects
 
 This repository contains my two internship projects:
 
